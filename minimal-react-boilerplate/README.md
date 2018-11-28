@@ -50,6 +50,25 @@ Webpack nos permite modular nuestro código fácilmente y agruparlo en un solo a
 ### Babel Loader
 
   Antes de poder ejecutar Webpack, necesitamos configurarlo para manejar el código ES6 y JSX
+  
+### Eslint
+
+    En Javascript existen multiples guías de estilo con prestigio como por ejemplo las de Airbnb, Google o Idiomatic. Es estas guías se detallan con mucha precisión la forma de escribir el código, es decir, las reglas a usar.
+
+ESLint dispone de una gran cantidad reglas a comprobar en el proyecto. A partir de la guía de estilo debemos buscar la configuración de reglas ESLint que queremos aplicar. Esta configuración se guarda en el fichero “.eslintrc.json”. En la red existen ya ficheros “.eslintrc.json” con la configuración necesaria para seguir cada una de las guías de estilo más conocidas. ESLint también dispone de una configuración recomendada por ellos. Se puede partir de una de estas configuraciones y realizar pequeñas modificaciones sobre ella.
+
+definir el fichero “.eslintrc.json” en el root y agregar 
+
+{
+    "extends" : "eslint:recommended",
+    "root": true,
+    "rules": {
+        "camelcase": 2,
+        "space-infix-ops": 2
+    }
+}
+
+Después de cada regla, el valor “2” significa que una violación supondría un error. Si hubieramos puesto 1 generaría un “warning” y un valor de 0 deshabilitaría la regla.
 
 ## Estructura del folder
 
